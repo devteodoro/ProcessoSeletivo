@@ -17,30 +17,30 @@ namespace ProcessoSeletivo.Infrastructure.Repositories
             _dbContext = dbContext;
         }
 
-        public async Task<Person> GetById(int personId) => await _dbContext.People.Include(x => x.Photos).FirstOrDefaultAsync(p => p.Id == personId);
+        public async Task<Person> GetByIdAsync(int personId) => await _dbContext.People.Include(x => x.Photos).FirstOrDefaultAsync(p => p.Id == personId);
 
-        public async Task<Person> Create(Person person)
+        public async Task<Person> CreateAsync(Person person)
         {
             await _dbContext.People.AddAsync(person);
             await _dbContext.SaveChangesAsync();
             return person;
         }
 
-        public async Task<Person> Update(Person person)
+        public async Task<Person> UpdateAsync(Person person)
         {
             _dbContext.People.Update(person);
             await _dbContext.SaveChangesAsync();
             return person;
         }
 
-        public async Task<Person> Delete(Person person)
+        public async Task<Person> DeleteAsync(Person person)
         {
             _dbContext.People.Remove(person);
             await _dbContext.SaveChangesAsync();
             return person;
         }
 
-        public async Task<List<Person>> List(string? name, string? cpf, DateTime? dateOfbirth, Gender? sex)
+        public async Task<List<Person>> GetAllAsync(string? name, string? cpf, DateTime? dateOfbirth, Gender? sex)
         {
             var query = _dbContext.People.AsQueryable();
 
@@ -58,5 +58,7 @@ namespace ProcessoSeletivo.Infrastructure.Repositories
 
             return await query.ToListAsync();
         }
+
+        public async Task<Person> GetByCPFAsync(string cpf) => await _dbContext.People.FirstOrDefaultAsync(p => p.CPF == cpf);
     }
 }

@@ -5,14 +5,16 @@ namespace ProcessoSeletivo.Domain.Interfaces
 {
     public interface IPersonRepository
     {
-        Task<List<Person>> List(string? name, string? cpf, DateTime? dateOfbirth, Gender? sex);
+        Task<List<Person>> GetAllAsync(string? name, string? cpf, DateTime? dateOfbirth, Gender? sex);
 
-        Task<Person> GetById(int PersonId);
+        Task<Person> GetByIdAsync(int PersonId);
 
-        Task<Person> Create(Person person);
+        Task<Person> GetByCPFAsync(string cpf);
 
-        Task<Person> Update(Person person);
+        Task<Person> CreateAsync(Person person);
 
-        Task<Person> Delete(Person person);
+        Task<Person> UpdateAsync(Person person);
+
+        Task<Person> DeleteAsync(Person person);
     }
 }

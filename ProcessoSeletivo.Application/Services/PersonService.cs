@@ -23,12 +23,12 @@ namespace ProcessoSeletivo.Application.Services
             _photoRepository = photoRepository;
         }
 
-        public async Task<PersonDTO> GetPersonById(int Id)
+        public async Task<PersonDTO> GetPersonByIdAsync(int Id)
         {
             if (Id <= 0)
                 throw new ArgumentException("O id da pessoa é inválido!");
 
-            Person person = await _personRepository.GetById(Id);
+            Person person = await _personRepository.GetByIdAsync(Id);
 
             if (person == null)
                 throw new Exception("Usuário não encontrado!");
@@ -36,9 +36,9 @@ namespace ProcessoSeletivo.Application.Services
             return new PersonDTO(person.Id, person.Name, person.LastName, person.CPF, person.DateOfBirth, person.Sex);
         }
 
-        public async Task<List<PersonDTO>> ListPeople(string? name, string? cpf, DateTime? dateOfBitrh, Gender? sex)
+        public async Task<List<PersonDTO>> GetAllPersonAsync(string? name, string? cpf, DateTime? dateOfBitrh, Gender? sex)
         {
-            List<Person> people = await _personRepository.List(name, cpf, dateOfBitrh, sex);
+            List<Person> people = await _personRepository.GetAllAsync(name, cpf, dateOfBitrh, sex);
 
             List<PersonDTO> listPersonDTO = new List<PersonDTO>();
 
@@ -53,22 +53,42 @@ namespace ProcessoSeletivo.Application.Services
             return listPersonDTO;
         }
 
-        public async Task<PersonDTO> AddPerson(PersonDTO personDTO)
+        public async Task<PersonDTO> AddPersonAsync(PersonDTO personDTO)
         {
-            Person response = await _personRepository.Create(new Person(personDTO.Name, personDTO.LastName, personDTO.CPF, personDTO.DateOfBirth, personDTO.Sex, personDTO.Photo));
+            //verificar se o CPF já exite no banco
+            Person person = await _personRepository.GetByCPFAsync(personDTO.CPF);
+
+            if (person != null)
+                throw new Exception($"Já existe um usuário com o CPF {personDTO.CPF} cadastrado!");
+
+            Person response = await _personRepository.CreateAsync(new Person(personDTO.Name, personDTO.LastName, personDTO.CPF, personDTO.DateOfBirth, personDTO.Sex, personDTO.Photo));
             return new PersonDTO(response.Id, response.Name, response.LastName, response.CPF, response.DateOfBirth, response.Sex);
         }
 
-        public async Task<PersonDTO> UpdatePerson(PersonDTO personDTO)
+        public async Task<PersonDTO> UpdatePersonAsync(PersonDTO personDTO)
         {
-            Person person = await _personRepository.GetById(personDTO.Id);
+            Person personCPF = await _personRepository.GetByCPFAsync(personDTO.CPF);
+
+            if (personCPF != null)
+            {
+                if(personDTO.Id != personCPF.Id)
+                    throw new Exception($"Já existe um usuário com o CPF {personDTO.CPF} cadastrado!");
+            }
+                
+            Person person = await _personRepository.GetByIdAsync(personDTO.Id);
 
             if (person == null)
                 throw new Exception("Usuário não encontrado!");
 
-            person.Name = personDTO.Name;
-            person.LastName = personDTO.LastName;
-            person.CPF = personDTO.CPF;
+            if (!string.IsNullOrEmpty(personDTO.Name))
+                person.Name = personDTO.Name;
+
+            if (!string.IsNullOrEmpty(personDTO.LastName))
+                person.LastName = personDTO.LastName;
+
+            if (!string.IsNullOrEmpty(personDTO.CPF))
+                person.CPF = personDTO.CPF;
+
             person.DateOfBirth = personDTO.DateOfBirth;
             person.Sex = personDTO.Sex;
 
@@ -82,19 +102,29 @@ namespace ProcessoSeletivo.Application.Services
                 person.Photos.Add(new Photo(personDTO.Photo, true, person.Id));
             }
 
-            await _personRepository.Update(person);
+            await _personRepository.UpdateAsync(person);
             return personDTO;
         }
 
-        public async Task<PersonDTO> DeletePerson(int Id)
+        public async Task<PersonDTO> DeletePersonAsync(int Id)
         {
-            Person person = await _personRepository.GetById(Id);
+            Person person = await _personRepository.GetByIdAsync(Id);
 
             if (person == null)
                 throw new Exception("Pessoa não encontrada!");
 
-            await _personRepository.Delete(person);
+            await _personRepository.DeleteAsync(person);
             return new PersonDTO(person.Id, person.Name, person.LastName, person.CPF, person.DateOfBirth, person.Sex);
+        }
+
+        public bool ImadeSizeValid(long tamanho)
+        {
+            long MaxFileSize = 1 * 1024 * 1024;
+
+            if(tamanho > MaxFileSize)
+                return false;
+
+            return true;
         }
     }
 }

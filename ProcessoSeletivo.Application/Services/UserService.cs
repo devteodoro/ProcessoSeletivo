@@ -16,12 +16,12 @@ namespace ProcessoSeletivo.Application.Services
             _tokenService = tokenService;
         }
 
-        public async Task<UserDTO> GetUserById(int id)
+        public async Task<UserDTO> GetUserByIdAsync(int id)
         {
             if(id <= 0)
                 throw new ArgumentException("O id do usuário é inválido!");
 
-            User user = await _userRepository.GetById(id);
+            User user = await _userRepository.GetByIdAsync(id);
 
             if (user == null)
                 throw new Exception("Usuário não encontrado!");
@@ -29,9 +29,9 @@ namespace ProcessoSeletivo.Application.Services
             return new UserDTO(user.Id, user.Name, user.Role);
         }
 
-        public async Task<List<UserDTO>> ListUsers()
+        public async Task<List<UserDTO>> GetAllUsersAsync()
         {
-            List<User> users = await _userRepository.List();
+            List<User> users = await _userRepository.GetAllAsync();
             List<UserDTO> listUserDTO = new List<UserDTO>();
 
             if (users != null && users.Count > 0)
@@ -45,15 +45,15 @@ namespace ProcessoSeletivo.Application.Services
             return listUserDTO;
         }
 
-        public async Task<UserDTO> AddUser(UserDTO userDTO)
+        public async Task<UserDTO> AddUserAsync(UserDTO userDTO)
         {
-            User response = await _userRepository.Create(new User(userDTO.Name, userDTO.Password, userDTO.Role));
+            User response = await _userRepository.CreateAsync(new User(userDTO.Name, userDTO.Password, userDTO.Role));
             return new UserDTO(response.Id, response.Name, response.Role);
         }
 
-        public async Task<UserDTO> UpdateUser(UserDTO userDTO)
+        public async Task<UserDTO> UpdateUserAsync(UserDTO userDTO)
         {
-            User user = await _userRepository.GetById(userDTO.Id);
+            User user = await _userRepository.GetByIdAsync(userDTO.Id);
 
             if (user == null)
                 throw new Exception("Usuário não encontrado!");
@@ -62,27 +62,27 @@ namespace ProcessoSeletivo.Application.Services
             user.Password = userDTO.Password;
             user.Role = userDTO.Role;
 
-            await _userRepository.Update(user);
+            await _userRepository.UpdateAsync(user);
             return userDTO;
         }
 
-        public async Task<UserDTO> DeleteUser(int Id)
+        public async Task<UserDTO> DeleteUserAsync(int Id)
         {
             if (Id <= 0)
                 throw new Exception("Id de usuário inválido!");
 
-            User user = await _userRepository.GetById(Id);
+            User user = await _userRepository.GetByIdAsync(Id);
 
             if (user == null)
                 throw new Exception("Usuário não encontrado!");
 
-            await _userRepository.Delete(user);
+            await _userRepository.DeleteAsync(user);
             return new UserDTO(user.Id, user.Name, user.Role);
         }
 
-        public async Task<string> Authenticate(UserDTO userDTO)
+        public async Task<string> AuthenticateAsync(UserDTO userDTO)
         {   
-            User user = await _userRepository.GetByName(userDTO.Name);
+            User user = await _userRepository.GetByNameAsync(userDTO.Name);
 
             if (user == null)
                 throw new Exception("Usuário não encontrado!");

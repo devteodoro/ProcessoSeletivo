@@ -74,7 +74,7 @@ namespace ProcessoSeletivo.Domain.Models
             if (this.Name.Length < 3 || this.Name.Length > 20)
                 throw new Exception("O nome da pessoa deve conter de 3 a 20 caracteres!");
 
-            if (this.LastName.Length < 3 || this.LastName.Length > 20)
+            if (this.LastName.Length < 3 || this.LastName.Length > 100)
                 throw new Exception("O sobrenome da pessoa deve conter de 3 a 100 caracteres!");
 
             if(!(this.DateOfBirth > Convert.ToDateTime("1900-01-01") && this.DateOfBirth < DateTime.Now))

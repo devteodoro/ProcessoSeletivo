@@ -10,14 +10,16 @@ namespace ProcessoSeletivo.Application.Interfaces
 {
     public interface IPersonService
     {
-        Task<List<PersonDTO>> ListPeople(string? name, string? cpf, DateTime? dateOfBirth, Gender? sex);
+        Task<List<PersonDTO>> GetAllPersonAsync(string? name, string? cpf, DateTime? dateOfBirth, Gender? sex);
 
-        Task<PersonDTO> GetPersonById(int Id);
+        Task<PersonDTO> GetPersonByIdAsync(int Id);
 
-        Task<PersonDTO> AddPerson(PersonDTO Id);
+        Task<PersonDTO> AddPersonAsync(PersonDTO Id);
 
-        Task<PersonDTO> UpdatePerson(PersonDTO Id);
+        Task<PersonDTO> UpdatePersonAsync(PersonDTO Id);
 
-        Task<PersonDTO> DeletePerson(int Id);
+        Task<PersonDTO> DeletePersonAsync(int Id);
+
+        bool ImadeSizeValid(long tamanho);
     }
 }

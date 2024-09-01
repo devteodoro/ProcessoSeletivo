@@ -29,7 +29,7 @@ namespace ProcessoSeletivo.Api.Controllers
                 if (!ModelState.IsValid)
                     return BadRequest(new ResultModel<UserDTO>("Dados invalidos!"));
 
-                string token = await _userService.Authenticate(new UserDTO() { Name = authViewModel.Name, Password = authViewModel.Password });
+                string token = await _userService.AuthenticateAsync(new UserDTO() { Name = authViewModel.Name, Password = authViewModel.Password });
 
                 if(string.IsNullOrEmpty(token))
                     return Unauthorized();

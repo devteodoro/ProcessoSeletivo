@@ -4,16 +4,16 @@ namespace ProcessoSeletivo.Application.Interfaces
 {
     public interface IUserService
     {
-        Task<List<UserDTO>> ListUsers();
+        Task<List<UserDTO>> GetAllUsersAsync();
 
-        Task<UserDTO> GetUserById(int Id);
+        Task<UserDTO> GetUserByIdAsync(int Id);
 
-        Task<UserDTO> AddUser(UserDTO Id);
+        Task<UserDTO> AddUserAsync(UserDTO Id);
 
-        Task<UserDTO> UpdateUser(UserDTO Id);
+        Task<UserDTO> UpdateUserAsync(UserDTO Id);
 
-        Task<UserDTO> DeleteUser(int Id);
+        Task<UserDTO> DeleteUserAsync(int Id);
 
-        Task<string> Authenticate(UserDTO userDTO);
+        Task<string> AuthenticateAsync(UserDTO userDTO);
     }
 }

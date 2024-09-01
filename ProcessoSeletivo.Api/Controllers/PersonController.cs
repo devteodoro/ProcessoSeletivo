@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using ProcessoSeletivo.Api.Filters;
 using ProcessoSeletivo.Api.Helpers;
 using ProcessoSeletivo.Api.ViewModels;
@@ -27,16 +28,17 @@ namespace ProcessoSeletivo.Api.Controllers
             _photoService = photoService;
         }
 
+        [Authorize]
         [HttpGet("v1/person/list")]
         public async Task<IActionResult> List(string? name, string? cpf, DateTime? dateOfbirth, Gender? sex)
         {
             try
             {
-                List<PersonResultViewModel> listPersonResult = new List<PersonResultViewModel>();
+                List<PersonResultViewModel> listPersonResult = new();
 
-                List<PersonDTO> people = await _personService.ListPeople(name, cpf, dateOfbirth, sex);
+                List<PersonDTO> people = await _personService.GetAllPersonAsync(name, cpf, dateOfbirth, sex);
 
-                if (people != null && people.Count > 0)
+                if (people != null && people.Any())
                 {
                     foreach (PersonDTO personDTO in people)
                     {
@@ -60,12 +62,13 @@ namespace ProcessoSeletivo.Api.Controllers
             }
         }
 
+        [Authorize]
         [HttpGet("v1/person/{PersonId:int}")]
         public async Task<IActionResult> Get(int PersonId)
         {
             try
             {
-                var personDto = await _personService.GetPersonById(PersonId);
+                var personDto = await _personService.GetPersonByIdAsync(PersonId);
 
                 return Ok(new ResultModel<PersonResultViewModel>(new PersonResultViewModel()
                 {
@@ -83,6 +86,7 @@ namespace ProcessoSeletivo.Api.Controllers
             }
         }
 
+        [Authorize]
         [HttpGet("v1/person/getphoto/{PersonId:int}")]
         public async Task<IActionResult> GetPhoto(int PersonId)
         {
@@ -105,19 +109,21 @@ namespace ProcessoSeletivo.Api.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(new ResultModel<PersonResultViewModel>("Dados inválidos!"));
 
-            long MaxFileSize = 1 * 1024 * 1024;
-            if(personViewModel.Photo != null && personViewModel.Photo.Length > MaxFileSize)
-                return BadRequest(new ResultModel<PersonResultViewModel>("O tamanho máximo da foto é 1MB!"));
+            if (personViewModel.Photo != null)
+            {
+                if (!_personService.ImadeSizeValid(personViewModel.Photo.Length))
+                    return BadRequest(new ResultModel<PersonResultViewModel>("O tamanho máximo da foto é 1MB!"));
+            }
 
             try
             {
-                string base64jpg = string.Empty;             
-                if(personViewModel.Photo != null)
-                    base64jpg = ConvertImageBase64.ConvertImageToBase64JPG(personViewModel.Photo);
+                string base64jpg = string.Empty;
+                if (personViewModel.Photo != null)
+                    base64jpg = ImageHelper.ConvertImageToBase64JPG(personViewModel.Photo);
 
                 PersonDTO persondto = new PersonDTO(personViewModel.Name, personViewModel.LastName, personViewModel.CPF, personViewModel.DateOfBirth, personViewModel.Sex, base64jpg);
 
-                PersonDTO response = await _personService.AddPerson(persondto);
+                PersonDTO response = await _personService.AddPersonAsync(persondto);
 
                 return Created(
                     $"v1/person/{response.Id}",
@@ -144,20 +150,21 @@ namespace ProcessoSeletivo.Api.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(new ResultModel<PersonResultViewModel>("Dados inválidos!"));
 
-            long MaxFileSize = 1 * 1024 * 1024;
-
-            if (personViewModel.Photo != null && personViewModel.Photo.Length > MaxFileSize)
-                return BadRequest(new ResultModel<PersonResultViewModel>("O tamanho máximo da foto é 1MB!"));
+            if (personViewModel.Photo != null)
+            {
+                if (!_personService.ImadeSizeValid(personViewModel.Photo.Length))
+                    return BadRequest(new ResultModel<PersonResultViewModel>("O tamanho máximo da foto é 1MB!"));
+            }
 
             try
             {
                 string base64jpg = string.Empty;
                 if (personViewModel.Photo != null)
-                    base64jpg = ConvertImageBase64.ConvertImageToBase64JPG(personViewModel.Photo);
+                    base64jpg = ImageHelper.ConvertImageToBase64JPG(personViewModel.Photo);
 
                 PersonDTO persondto = new PersonDTO(personViewModel.Id, personViewModel.Name, personViewModel.LastName, personViewModel.CPF, personViewModel.DateOfBirth, personViewModel.Sex, base64jpg);
 
-                PersonDTO response = await _personService.UpdatePerson(persondto);
+                PersonDTO response = await _personService.UpdatePersonAsync(persondto);
 
                 return Ok(new ResultModel<PersonResultViewModel>(new PersonResultViewModel
                 {
@@ -184,7 +191,7 @@ namespace ProcessoSeletivo.Api.Controllers
 
             try
             {
-                PersonDTO response = await _personService.DeletePerson(PersonId);
+                PersonDTO response = await _personService.DeletePersonAsync(PersonId);
 
                 return Ok(new ResultModel<PersonResultViewModel>(new PersonResultViewModel
                 {
@@ -201,6 +208,5 @@ namespace ProcessoSeletivo.Api.Controllers
                 return StatusCode(500, new ResultModel<UserResultViewModel>($"Falha interna no servidor. {e.Message}"));
             }
         }
-
     }
 }

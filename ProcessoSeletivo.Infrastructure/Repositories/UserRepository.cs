@@ -14,31 +14,31 @@ namespace ProcessoSeletivo.Infrastructure.Repositories
             _dbContext = dbContext;
         }
 
-        public async Task<List<User>> List() => await _dbContext.Users.ToListAsync();
+        public async Task<List<User>> GetAllAsync() => await _dbContext.Users.ToListAsync();
 
-        public async Task<User> GetById(int UserId) => await _dbContext.Users.FirstOrDefaultAsync(p => p.Id == UserId);
+        public async Task<User> GetByIdAsync(int UserId) => await _dbContext.Users.FirstOrDefaultAsync(p => p.Id == UserId);
 
-        public async Task<User> Create(User user)
+        public async Task<User> CreateAsync(User user)
         {
             await _dbContext.Users.AddAsync(user);
             await _dbContext.SaveChangesAsync();
             return user;
         }
 
-        public async Task<User> Update(User user)
+        public async Task<User> UpdateAsync(User user)
         {
             _dbContext.Users.Update(user);
             await _dbContext.SaveChangesAsync();
             return user;
         }
 
-        public async Task<User> Delete(User user)
+        public async Task<User> DeleteAsync(User user)
         {
             _dbContext.Users.Remove(user);
             await _dbContext.SaveChangesAsync();
             return user;
         }
 
-        public async Task<User> GetByName(string UserName) => await _dbContext.Users.FirstOrDefaultAsync(p => p.Name == UserName);
+        public async Task<User> GetByNameAsync(string UserName) => await _dbContext.Users.FirstOrDefaultAsync(p => p.Name == UserName);
     }
 }

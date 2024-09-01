@@ -19,12 +19,13 @@ namespace ProcessoSeletivo.Api.Controllers
             _userService = userService;
         }
 
+        [Authorize]
         [HttpGet("v1/user/list")]
         public async Task<IActionResult> List()
         {
             try
             {
-                var listUserDto = await _userService.ListUsers();
+                var listUserDto = await _userService.GetAllUsersAsync();
 
                 List<UserResultViewModel> listViewModel = new List<UserResultViewModel>();
 
@@ -49,12 +50,13 @@ namespace ProcessoSeletivo.Api.Controllers
             }
         }
 
+        [Authorize]
         [HttpGet("v1/user/{userId:int}")]
         public async Task<IActionResult> Get(int userId)
         {
             try
             {
-                var userDto = await _userService.GetUserById(userId);
+                var userDto = await _userService.GetUserByIdAsync(userId);
 
                 return Ok(new ResultModel<UserResultViewModel>(new UserResultViewModel()
                 {
@@ -80,7 +82,7 @@ namespace ProcessoSeletivo.Api.Controllers
             {
                 UserDTO userDTO = new UserDTO(userViewModel.Name, userViewModel.Password, userViewModel.Role);
 
-                UserDTO response = await _userService.AddUser(userDTO);
+                UserDTO response = await _userService.AddUserAsync(userDTO);
 
                 return Created(
                     $"v1/user/{response.Id}",
@@ -108,7 +110,7 @@ namespace ProcessoSeletivo.Api.Controllers
             {
                 UserDTO userDTO = new UserDTO(userViewModel.Id, userViewModel.Name, userViewModel.Password, userViewModel.Role);
 
-                UserDTO response = await _userService.UpdateUser(userDTO);
+                UserDTO response = await _userService.UpdateUserAsync(userDTO);
 
                 return Ok(new ResultModel<UserResultViewModel>(new UserResultViewModel
                 {
@@ -132,7 +134,7 @@ namespace ProcessoSeletivo.Api.Controllers
 
             try
             {
-                UserDTO response = await _userService.DeleteUser(userId);
+                UserDTO response = await _userService.DeleteUserAsync(userId);
 
                 return Ok(new ResultModel<UserResultViewModel>(new UserResultViewModel
                 {

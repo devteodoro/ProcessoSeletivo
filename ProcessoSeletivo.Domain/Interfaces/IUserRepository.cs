@@ -4,16 +4,16 @@ namespace ProcessoSeletivo.Domain.Interfaces
 {
     public interface IUserRepository
     {
-        Task<List<User>> List();
+        Task<List<User>> GetAllAsync();
 
-        Task<User> GetById(int UserId);
+        Task<User> GetByIdAsync(int UserId);
 
-        Task<User> GetByName(string UserName);
+        Task<User> GetByNameAsync(string UserName);
 
-        Task<User> Create(User user);
+        Task<User> CreateAsync(User user);
 
-        Task<User> Update(User user);
+        Task<User> UpdateAsync(User user);
 
-        Task<User> Delete(User user);
+        Task<User> DeleteAsync(User user);
     }
 }
