@@ -3,24 +3,32 @@
   "WorkspaceRootPath": "D:\\dev\\Processo Seletivo Montreal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FF09DFD6-8DE4-4BF2-B0EB-03F90357E15A}|ProcessoSeletivo.Application\\ProcessoSeletivo.Application.csproj|d:\\dev\\processo seletivo montreal\\processoseletivo.application\\services\\personservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF09DFD6-8DE4-4BF2-B0EB-03F90357E15A}|ProcessoSeletivo.Application\\ProcessoSeletivo.Application.csproj|solutionrelative:processoseletivo.application\\services\\personservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E4EF130F-7698-4F17-A160-B4290B91849B}|ProcessoSeletivo.Api\\ProcessoSeletivo.Api.csproj|d:\\dev\\processo seletivo montreal\\processoseletivo.api\\controllers\\personcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E4EF130F-7698-4F17-A160-B4290B91849B}|ProcessoSeletivo.Api\\ProcessoSeletivo.Api.csproj|solutionrelative:processoseletivo.api\\controllers\\personcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4EF130F-7698-4F17-A160-B4290B91849B}|ProcessoSeletivo.Api\\ProcessoSeletivo.Api.csproj|d:\\dev\\processo seletivo montreal\\processoseletivo.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4EF130F-7698-4F17-A160-B4290B91849B}|ProcessoSeletivo.Api\\ProcessoSeletivo.Api.csproj|solutionrelative:processoseletivo.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4EF130F-7698-4F17-A160-B4290B91849B}|ProcessoSeletivo.Api\\ProcessoSeletivo.Api.csproj|d:\\dev\\processo seletivo montreal\\processoseletivo.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4EF130F-7698-4F17-A160-B4290B91849B}|ProcessoSeletivo.Api\\ProcessoSeletivo.Api.csproj|solutionrelative:processoseletivo.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{64C70191-7C46-4681-B53A-F91C5FE02A8C}|ProcessoSeletivo.Domain\\ProcessoSeletivo.Domain.csproj|d:\\dev\\processo seletivo montreal\\processoseletivo.domain\\models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{64C70191-7C46-4681-B53A-F91C5FE02A8C}|ProcessoSeletivo.Domain\\ProcessoSeletivo.Domain.csproj|solutionrelative:processoseletivo.domain\\models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E4EF130F-7698-4F17-A160-B4290B91849B}|ProcessoSeletivo.Api\\ProcessoSeletivo.Api.csproj|d:\\dev\\processo seletivo montreal\\processoseletivo.api\\viewmodels\\person\\personupdateviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4EF130F-7698-4F17-A160-B4290B91849B}|ProcessoSeletivo.Api\\ProcessoSeletivo.Api.csproj|solutionrelative:processoseletivo.api\\viewmodels\\person\\personupdateviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4EF130F-7698-4F17-A160-B4290B91849B}|ProcessoSeletivo.Api\\ProcessoSeletivo.Api.csproj|d:\\dev\\processo seletivo montreal\\processoseletivo.api\\filters\\customauthorizeattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4EF130F-7698-4F17-A160-B4290B91849B}|ProcessoSeletivo.Api\\ProcessoSeletivo.Api.csproj|solutionrelative:processoseletivo.api\\filters\\customauthorizeattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CE60493-FD1A-4D54-BDB4-2A9B940E6867}|ProcessoSeletivo.Infrastructure\\ProcessoSeletivo.Infrastructure.csproj|d:\\dev\\processo seletivo montreal\\processoseletivo.infrastructure\\repositories\\photorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CE60493-FD1A-4D54-BDB4-2A9B940E6867}|ProcessoSeletivo.Infrastructure\\ProcessoSeletivo.Infrastructure.csproj|solutionrelative:processoseletivo.infrastructure\\repositories\\photorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FF09DFD6-8DE4-4BF2-B0EB-03F90357E15A}|ProcessoSeletivo.Application\\ProcessoSeletivo.Application.csproj|d:\\dev\\processo seletivo montreal\\processoseletivo.application\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF09DFD6-8DE4-4BF2-B0EB-03F90357E15A}|ProcessoSeletivo.Application\\ProcessoSeletivo.Application.csproj|solutionrelative:processoseletivo.application\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF09DFD6-8DE4-4BF2-B0EB-03F90357E15A}|ProcessoSeletivo.Application\\ProcessoSeletivo.Application.csproj|d:\\dev\\processo seletivo montreal\\processoseletivo.application\\interfaces\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF09DFD6-8DE4-4BF2-B0EB-03F90357E15A}|ProcessoSeletivo.Application\\ProcessoSeletivo.Application.csproj|solutionrelative:processoseletivo.application\\interfaces\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,68 +50,90 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\dev\\Processo Seletivo Montreal\\ProcessoSeletivo.Api\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "ProcessoSeletivo.Api\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\dev\\Processo Seletivo Montreal\\ProcessoSeletivo.Api\\Controllers\\UserController.cs",
+              "RelativeToolTip": "ProcessoSeletivo.Api\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAEcAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T16:47:27.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Person.cs",
-              "DocumentMoniker": "D:\\dev\\Processo Seletivo Montreal\\ProcessoSeletivo.Domain\\Models\\Person.cs",
-              "RelativeDocumentMoniker": "ProcessoSeletivo.Domain\\Models\\Person.cs",
-              "ToolTip": "D:\\dev\\Processo Seletivo Montreal\\ProcessoSeletivo.Domain\\Models\\Person.cs",
-              "RelativeToolTip": "ProcessoSeletivo.Domain\\Models\\Person.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAIA5wCgAAAAIAAAA",
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\dev\\Processo Seletivo Montreal\\ProcessoSeletivo.Api\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "ProcessoSeletivo.Api\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\dev\\Processo Seletivo Montreal\\ProcessoSeletivo.Api\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "ProcessoSeletivo.Api\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAABKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-01T04:36:05.301Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PersonUpdateViewModel.cs",
-              "DocumentMoniker": "D:\\dev\\Processo Seletivo Montreal\\ProcessoSeletivo.Api\\ViewModels\\Person\\PersonUpdateViewModel.cs",
-              "RelativeDocumentMoniker": "ProcessoSeletivo.Api\\ViewModels\\Person\\PersonUpdateViewModel.cs",
-              "ToolTip": "D:\\dev\\Processo Seletivo Montreal\\ProcessoSeletivo.Api\\ViewModels\\Person\\PersonUpdateViewModel.cs",
-              "RelativeToolTip": "ProcessoSeletivo.Api\\ViewModels\\Person\\PersonUpdateViewModel.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAgwCcAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-01T04:24:37.929Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PhotoRepository.cs",
-              "DocumentMoniker": "D:\\dev\\Processo Seletivo Montreal\\ProcessoSeletivo.Infrastructure\\Repositories\\PhotoRepository.cs",
-              "RelativeDocumentMoniker": "ProcessoSeletivo.Infrastructure\\Repositories\\PhotoRepository.cs",
-              "ToolTip": "D:\\dev\\Processo Seletivo Montreal\\ProcessoSeletivo.Infrastructure\\Repositories\\PhotoRepository.cs",
-              "RelativeToolTip": "ProcessoSeletivo.Infrastructure\\Repositories\\PhotoRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAABtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-01T04:16:45.295Z",
+              "WhenOpened": "2024-09-01T16:46:16.789Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PersonService.cs",
-              "DocumentMoniker": "D:\\dev\\Processo Seletivo Montreal\\ProcessoSeletivo.Application\\Services\\PersonService.cs",
-              "RelativeDocumentMoniker": "ProcessoSeletivo.Application\\Services\\PersonService.cs",
-              "ToolTip": "D:\\dev\\Processo Seletivo Montreal\\ProcessoSeletivo.Application\\Services\\PersonService.cs",
-              "RelativeToolTip": "ProcessoSeletivo.Application\\Services\\PersonService.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAEwA4AAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-01T04:13:35.073Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "PersonController.cs",
               "DocumentMoniker": "D:\\dev\\Processo Seletivo Montreal\\ProcessoSeletivo.Api\\Controllers\\PersonController.cs",
               "RelativeDocumentMoniker": "ProcessoSeletivo.Api\\Controllers\\PersonController.cs",
               "ToolTip": "D:\\dev\\Processo Seletivo Montreal\\ProcessoSeletivo.Api\\Controllers\\PersonController.cs",
               "RelativeToolTip": "ProcessoSeletivo.Api\\Controllers\\PersonController.cs",
-              "ViewState": "AQIAAIoAAAAAAAAAAAAewJkAAAAAAAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAAAQwLEAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-01T04:09:48.337Z",
+              "WhenOpened": "2024-09-01T16:05:18.413Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CustomAuthorizeAttribute.cs",
+              "DocumentMoniker": "D:\\dev\\Processo Seletivo Montreal\\ProcessoSeletivo.Api\\Filters\\CustomAuthorizeAttribute.cs",
+              "RelativeDocumentMoniker": "ProcessoSeletivo.Api\\Filters\\CustomAuthorizeAttribute.cs",
+              "ToolTip": "D:\\dev\\Processo Seletivo Montreal\\ProcessoSeletivo.Api\\Filters\\CustomAuthorizeAttribute.cs",
+              "RelativeToolTip": "ProcessoSeletivo.Api\\Filters\\CustomAuthorizeAttribute.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwBwAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T17:20:16.939Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Person.cs",
+              "DocumentMoniker": "D:\\dev\\Processo Seletivo Montreal\\ProcessoSeletivo.Domain\\Models\\Person.cs",
+              "RelativeDocumentMoniker": "ProcessoSeletivo.Domain\\Models\\Person.cs",
+              "ToolTip": "D:\\dev\\Processo Seletivo Montreal\\ProcessoSeletivo.Domain\\Models\\Person.cs",
+              "RelativeToolTip": "ProcessoSeletivo.Domain\\Models\\Person.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAcwFEAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T17:37:47.792Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ITokenService.cs",
+              "DocumentMoniker": "D:\\dev\\Processo Seletivo Montreal\\ProcessoSeletivo.Application\\Interfaces\\ITokenService.cs",
+              "RelativeDocumentMoniker": "ProcessoSeletivo.Application\\Interfaces\\ITokenService.cs",
+              "ToolTip": "D:\\dev\\Processo Seletivo Montreal\\ProcessoSeletivo.Application\\Interfaces\\ITokenService.cs",
+              "RelativeToolTip": "ProcessoSeletivo.Application\\Interfaces\\ITokenService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T16:35:43.144Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "D:\\dev\\Processo Seletivo Montreal\\ProcessoSeletivo.Application\\Services\\TokenService.cs",
+              "RelativeDocumentMoniker": "ProcessoSeletivo.Application\\Services\\TokenService.cs",
+              "ToolTip": "D:\\dev\\Processo Seletivo Montreal\\ProcessoSeletivo.Application\\Services\\TokenService.cs",
+              "RelativeToolTip": "ProcessoSeletivo.Application\\Services\\TokenService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABUAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T16:35:46.664Z"
             }
           ]
         }

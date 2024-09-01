@@ -1,7 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using ProcessoSeletivo.Api.Filters;
 using ProcessoSeletivo.Api.ViewModels.User;
 using ProcessoSeletivo.Application.DTO;
 using ProcessoSeletivo.Application.Interfaces;
+using ProcessoSeletivo.Domain.Enums;
 using ProcessoSeletivo.Domain.Models;
 
 namespace ProcessoSeletivo.Api.Controllers
@@ -66,6 +69,7 @@ namespace ProcessoSeletivo.Api.Controllers
             }
         }
 
+        [CustomAuthorize(Role.Admin)]
         [HttpPost("v1/user/create")]
         public async Task<IActionResult> Create(UserViewModel userViewModel)
         {
@@ -93,6 +97,7 @@ namespace ProcessoSeletivo.Api.Controllers
             }
         }
 
+        [CustomAuthorize(Role.Admin)]
         [HttpPut("v1/user/update")]
         public async Task<IActionResult> Update(UserUpdateViewModel userViewModel)
         {
@@ -118,6 +123,7 @@ namespace ProcessoSeletivo.Api.Controllers
             }
         }
 
+        [CustomAuthorize(Role.Admin)]
         [HttpDelete("v1/user/delete/{userId:int}")]
         public async Task<IActionResult> Delete(int userId)
         {

@@ -13,5 +13,7 @@ namespace ProcessoSeletivo.Application.Interfaces
         Task<UserDTO> UpdateUser(UserDTO Id);
 
         Task<UserDTO> DeleteUser(int Id);
+
+        Task<string> Authenticate(UserDTO userDTO);
     }
 }

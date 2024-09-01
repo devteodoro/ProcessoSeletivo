@@ -21,7 +21,7 @@ namespace ProcessoSeletivo.Application.Services
                       new Claim("UserName", user.Name),
                       new Claim("UserRole", user.Role.ToString()),
                 }),
-                Expires = DateTime.UtcNow.AddHours(3),
+                Expires = DateTime.UtcNow.AddHours(1),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
 

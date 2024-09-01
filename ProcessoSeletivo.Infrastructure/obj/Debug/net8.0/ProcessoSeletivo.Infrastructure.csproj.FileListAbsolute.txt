@@ -17,3 +17,4 @@ D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Infrastructure\obj\Debug\net8
 D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Infrastructure\obj\Debug\net8.0\ProcessoSeletivo.Infrastructure.genruntimeconfig.cache
 D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Infrastructure\bin\Debug\net8.0\ProcessoSeletivo.Application.dll
 D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Infrastructure\bin\Debug\net8.0\ProcessoSeletivo.Application.pdb
+D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Infrastructure\obj\Debug\net8.0\ProcessoSeletivo.Infrastructure.sourcelink.json

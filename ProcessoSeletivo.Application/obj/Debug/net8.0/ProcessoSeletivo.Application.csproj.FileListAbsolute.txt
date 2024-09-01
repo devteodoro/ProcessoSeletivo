@@ -13,3 +13,4 @@ D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Application\bin\Debug\net8.0\
 D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Application\bin\Debug\net8.0\ProcessoSeletivo.Domain.pdb
 D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Application\obj\Debug\net8.0\ProcessoSeletivo.Application.csproj.AssemblyReference.cache
 D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Application\obj\Debug\net8.0\Processo.0EA8FFA2.Up2Date
+D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Application\obj\Debug\net8.0\ProcessoSeletivo.Application.sourcelink.json

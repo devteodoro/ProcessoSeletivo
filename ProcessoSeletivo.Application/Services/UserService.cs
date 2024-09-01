@@ -8,10 +8,12 @@ namespace ProcessoSeletivo.Application.Services
     public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
+        private readonly ITokenService _tokenService;
 
-        public UserService(IUserRepository userRepository)
+        public UserService(IUserRepository userRepository, ITokenService tokenService)
         {
             _userRepository = userRepository;
+            _tokenService = tokenService;
         }
 
         public async Task<UserDTO> GetUserById(int id)
@@ -76,6 +78,20 @@ namespace ProcessoSeletivo.Application.Services
 
             await _userRepository.Delete(user);
             return new UserDTO(user.Id, user.Name, user.Role);
+        }
+
+        public async Task<string> Authenticate(UserDTO userDTO)
+        {   
+            User user = await _userRepository.GetByName(userDTO.Name);
+
+            if (user == null)
+                throw new Exception("Usuário não encontrado!");
+
+            if(userDTO.Password != user.Password)
+                throw new Exception("Usuário ou senha incorretos!");
+
+            string token = _tokenService.GenerateToken(user);
+            return token;
         }
     }
 }

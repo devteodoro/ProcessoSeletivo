@@ -10,7 +10,6 @@ namespace ProcessoSeletivo.Domain.Enums
     public enum Gender
     {
         Masculine = 1,
-        feminine = 2,
-        Other = 3
+        feminine = 2
     }
 }

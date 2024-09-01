@@ -9,3 +9,4 @@ D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Domain\obj\Debug\net8.0\Proce
 D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Domain\obj\Debug\net8.0\refint\ProcessoSeletivo.Domain.dll
 D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Domain\obj\Debug\net8.0\ProcessoSeletivo.Domain.pdb
 D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Domain\obj\Debug\net8.0\ref\ProcessoSeletivo.Domain.dll
+D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Domain\obj\Debug\net8.0\ProcessoSeletivo.Domain.sourcelink.json

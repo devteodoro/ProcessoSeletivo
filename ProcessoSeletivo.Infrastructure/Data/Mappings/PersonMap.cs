@@ -29,6 +29,10 @@ namespace ProcessoSeletivo.Infrastructure.Data.Mappings
                 .HasMaxLength(100);
 
             builder
+                 .HasIndex(p => p.CPF)
+                 .IsUnique();
+
+            builder
                 .Property(p => p.CPF)
                 .IsRequired()
                 .HasMaxLength(14);

@@ -120,3 +120,4 @@ D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Api\bin\Debug\net8.0\Microsof
 D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Api\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Api\bin\Debug\net8.0\System.Drawing.Common.dll
 D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Api\bin\Debug\net8.0\runtimes\win\lib\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Api\obj\Debug\net8.0\ProcessoSeletivo.Api.sourcelink.json

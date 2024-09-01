@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ProcessoSeletivo.Api.Filters;
 using ProcessoSeletivo.Api.Helpers;
 using ProcessoSeletivo.Api.ViewModels;
 using ProcessoSeletivo.Api.ViewModels.Person;
@@ -97,6 +98,7 @@ namespace ProcessoSeletivo.Api.Controllers
             }
         }
 
+        [CustomAuthorize(Role.Admin)]
         [HttpPost("v1/person/create")]
         public async Task<IActionResult> Create(PersonViewModel personViewModel)
         {
@@ -135,6 +137,7 @@ namespace ProcessoSeletivo.Api.Controllers
             }
         }
 
+        [CustomAuthorize(Role.Admin)]
         [HttpPut("v1/person/update")]
         public async Task<IActionResult> Update(PersonUpdateViewModel personViewModel)
         {
@@ -172,6 +175,7 @@ namespace ProcessoSeletivo.Api.Controllers
             }
         }
 
+        [CustomAuthorize(Role.Admin)]
         [HttpDelete("v1/person/delete/{PersonId:int}")]
         public async Task<IActionResult> Delete(int PersonId)
         {
