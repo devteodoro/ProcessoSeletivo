@@ -1,0 +1,15 @@
+D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Application\bin\Debug\net8.0\ProcessoSeletivo.Application.deps.json
+D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Application\bin\Debug\net8.0\ProcessoSeletivo.Application.dll
+D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Application\bin\Debug\net8.0\ProcessoSeletivo.Application.pdb
+D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Application\obj\Debug\net8.0\ProcessoSeletivo.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Application\obj\Debug\net8.0\ProcessoSeletivo.Application.AssemblyInfoInputs.cache
+D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Application\obj\Debug\net8.0\ProcessoSeletivo.Application.AssemblyInfo.cs
+D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Application\obj\Debug\net8.0\ProcessoSeletivo.Application.csproj.CoreCompileInputs.cache
+D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Application\obj\Debug\net8.0\ProcessoSeletivo.Application.dll
+D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Application\obj\Debug\net8.0\refint\ProcessoSeletivo.Application.dll
+D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Application\obj\Debug\net8.0\ProcessoSeletivo.Application.pdb
+D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Application\obj\Debug\net8.0\ref\ProcessoSeletivo.Application.dll
+D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Application\bin\Debug\net8.0\ProcessoSeletivo.Domain.dll
+D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Application\bin\Debug\net8.0\ProcessoSeletivo.Domain.pdb
+D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Application\obj\Debug\net8.0\ProcessoSeletivo.Application.csproj.AssemblyReference.cache
+D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Application\obj\Debug\net8.0\Processo.0EA8FFA2.Up2Date

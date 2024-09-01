@@ -1,0 +1,11 @@
+D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Domain\obj\Debug\net8.0\ProcessoSeletivo.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Domain\obj\Debug\net8.0\ProcessoSeletivo.Domain.AssemblyInfoInputs.cache
+D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Domain\obj\Debug\net8.0\ProcessoSeletivo.Domain.AssemblyInfo.cs
+D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Domain\obj\Debug\net8.0\ProcessoSeletivo.Domain.csproj.CoreCompileInputs.cache
+D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Domain\bin\Debug\net8.0\ProcessoSeletivo.Domain.deps.json
+D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Domain\bin\Debug\net8.0\ProcessoSeletivo.Domain.dll
+D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Domain\bin\Debug\net8.0\ProcessoSeletivo.Domain.pdb
+D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Domain\obj\Debug\net8.0\ProcessoSeletivo.Domain.dll
+D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Domain\obj\Debug\net8.0\refint\ProcessoSeletivo.Domain.dll
+D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Domain\obj\Debug\net8.0\ProcessoSeletivo.Domain.pdb
+D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Domain\obj\Debug\net8.0\ref\ProcessoSeletivo.Domain.dll
