@@ -44,6 +44,9 @@ namespace ProcessoSeletivo.Infrastructure
             services
                 .AddScoped<IPhotoService, PhotoService>();
 
+            services
+                .AddTransient<ICryptography, Cryptography>();
+
             return services;
         }
     }

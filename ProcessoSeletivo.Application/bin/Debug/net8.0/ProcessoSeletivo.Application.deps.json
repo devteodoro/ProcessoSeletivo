@@ -71,7 +71,10 @@
       },
       "ProcessoSeletivo.Domain/1.0.0": {
         "runtime": {
-          "ProcessoSeletivo.Domain.dll": {}
+          "ProcessoSeletivo.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

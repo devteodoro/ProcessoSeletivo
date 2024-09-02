@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProcessoSeletivo.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1979e02dfb7ed0694d7f1351a1a263eec80b04c0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+48441744a5170baaa656751613d7389528ccf147")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProcessoSeletivo.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProcessoSeletivo.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

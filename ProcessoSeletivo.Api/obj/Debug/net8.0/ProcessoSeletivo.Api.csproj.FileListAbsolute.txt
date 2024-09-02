@@ -56,7 +56,6 @@ D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Api\bin\Debug\net8.0\System.C
 D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Api\bin\Debug\net8.0\System.Composition.Hosting.dll
 D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Api\bin\Debug\net8.0\System.Composition.Runtime.dll
 D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Api\bin\Debug\net8.0\System.Composition.TypedParts.dll
-D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Api\bin\Debug\net8.0\System.Text.Json.dll
 D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Api\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
 D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Api\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
 D:\dev\Processo Seletivo Montreal\ProcessoSeletivo.Api\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll

@@ -2,6 +2,7 @@
 using ProcessoSeletivo.Application.Interfaces;
 using ProcessoSeletivo.Domain.Interfaces;
 using ProcessoSeletivo.Domain.Models;
+using System.Text.RegularExpressions;
 
 namespace ProcessoSeletivo.Application.Services
 {
@@ -9,11 +10,13 @@ namespace ProcessoSeletivo.Application.Services
     {
         private readonly IUserRepository _userRepository;
         private readonly ITokenService _tokenService;
+        private readonly ICryptography _cryptographyService;
 
-        public UserService(IUserRepository userRepository, ITokenService tokenService)
+        public UserService(IUserRepository userRepository, ITokenService tokenService, ICryptography cryptographyService)
         {
             _userRepository = userRepository;
             _tokenService = tokenService;
+            _cryptographyService = cryptographyService;
         }
 
         public async Task<UserDTO> GetUserByIdAsync(int id)
@@ -47,7 +50,24 @@ namespace ProcessoSeletivo.Application.Services
 
         public async Task<UserDTO> AddUserAsync(UserDTO userDTO)
         {
-            User response = await _userRepository.CreateAsync(new User(userDTO.Name, userDTO.Password, userDTO.Role));
+            if (userDTO.Name.Length <= 5)
+                throw new Exception("O nome deve conter pelo menos 5 caracteres!");
+
+            if (string.IsNullOrEmpty(userDTO.Password))
+                throw new Exception("A senha não pode ser vazia!");
+
+            if (userDTO.Password.Length < 8 || userDTO.Password.Length > 12)
+                throw new Exception("A senha deve conter entre 8 e 12 caracteres!");
+
+            if (!Regex.IsMatch(userDTO.Password, @"^[a-zA-Z0-9]+$"))
+                throw new Exception("A senha deve ser alfanumérica!");
+
+            if (!Regex.IsMatch(userDTO.Password, @"[a-zA-Z]") || !Regex.IsMatch(userDTO.Password, @"\d"))
+                throw new Exception("A senha deve conter letras e números!");
+
+            string passwordHash = _cryptographyService.GenerateHash(userDTO.Password);
+
+            User response = await _userRepository.CreateAsync(new User(userDTO.Name, passwordHash, userDTO.Role));
             return new UserDTO(response.Id, response.Name, response.Role);
         }
 
@@ -59,7 +79,7 @@ namespace ProcessoSeletivo.Application.Services
                 throw new Exception("Usuário não encontrado!");
 
             user.Name = userDTO.Name;
-            user.Password = userDTO.Password;
+            user.Password = _cryptographyService.GenerateHash(userDTO.Password);
             user.Role = userDTO.Role;
 
             await _userRepository.UpdateAsync(user);
@@ -87,7 +107,9 @@ namespace ProcessoSeletivo.Application.Services
             if (user == null)
                 throw new Exception("Usuário não encontrado!");
 
-            if(userDTO.Password != user.Password)
+            string passwordHash = _cryptographyService.GenerateHash(userDTO.Password);
+
+            if (passwordHash != user.Password)
                 throw new Exception("Usuário ou senha incorretos!");
 
             string token = _tokenService.GenerateToken(user);
